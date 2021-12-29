@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gvp="http://studio.genesyslab.com/gvp/" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <gvp:CallflowDiagram name="Main" designedUsing="Composer 8.1.561.16">
+    <history>8.1.3</history>
+    <history>8.1.300.01</history>
+    <blocks xsi:type="gvp:EntryBlock" name="Entry1" starting="true" category="Entry" applicationRoot="../src/ComposerRoot.vxml">
+      <variables name="APP_LANGUAGE" value="'en-US'" description="Application Language" type="System"/>
+      <variables name="APP_ASR_LANGUAGE" value="'en-US'" description="ASR Language" type="System"/>
+      <variables name="PREV_APP_LANGUAGE" value="'undefined'" description="Temporary Value of Previous Application Language" type="System"/>
+      <variables name="PREV_APP_ASR_LANGUAGE" value="'undefined'" description="Temporary Value of Previous Application Language" type="System"/>
+      <variables name="GRAMMARFILEDIR" value="'../Resources/Grammars'" description="Grammar File Directory" type="System"/>
+      <variables name="VOXFILEDIR" value="'../Resources/Prompts'" description="Audio File Directory" type="System"/>
+      <variables name="SCRIPTSDIR" value="'../Scripts'" description="JavaScript Directory" type="System"/>
+      <variables name="EnableReports" value="false" description="Reporting Flag" type="System"/>
+      <variables name="EnableSNMP" value="false" description="Flag for enabling SNMP Traps" type="System"/>
+      <variables name="CallUUID" value="session.connection.uuid" description="Universal ID" type="System"/>
+      <variables name="GVPSessionID" value="session.genesys.userdata[&quot;GVP-Session-ID&quot;]" description="GVP Session ID" type="System"/>
+      <variables name="DNIS" value="getDNIS()" description="DNIS associated with Called phone number" type="System"/>
+      <variables name="ANI" value="getANI()" description="ANI associated with the calling party." type="System"/>
+      <variables name="LAST_EVENT_NAME" value="'undefined'" description="Last event or error name" type="System"/>
+      <variables name="LAST_EVENT_MSG" value="'undefined'" description="Last event or error details" type="System"/>
+      <variables name="LAST_EVENT_URL" value="'undefined'" description="URL of the last event." type="System"/>
+      <variables name="LAST_EVENT_ELEMENT" value="'undefined'" description="Element name of the last event" type="System"/>
+      <variables name="LAST_EVENT_LINE" value="'undefined'" description="Line number of the last event" type="System"/>
+      <variables name="EnableFCR" value="true" description="Flag for enabling Full Call Recording" type="System"/>
+      <variables name="COMPOSER_WSSTUBBING" value="'0'" description="Flag to control WebServices Stubbing. '1' - ON" type="System"/>
+      <variables name="USE_LCASE_USERDATAKEY" value="0" description="Flag to control lowerCase lookup in UserData array. 1 - ON" type="System"/>
+      <variables name="APP_OPM" value="eval('('+session.connection.protocol.sip.requesturi['parameters']+')')" description="Operational Parameters Data Variable" type="System"/>
+      <variables name="OCS_RecordURI" value="getCallflowRecordURI()" description="OCS Record URI" type="System"/>
+      <variables name="OCS_URI" value="getCallflowOCSURI()" description="OCS URI" type="System"/>
+      <variables name="OCS_Record" value="getCallflowOCSRecord()" description="OCS Record" type="System"/>
+    </blocks>
+    <blocks xsi:type="gvp:ExitBlock" name="Exit1" terminating="true" category="Exit" returnMode="false"/>
+    <links xsi:type="gvp:CallflowOutputLink" fromBlock="/0/@blocks.0" toBlock="/0/@blocks.1"/>
+    <namespaces name="gvp" value="http://www.genesyslab.com/2006/vxml21-extension"/>
+    <systemProperties name="RetainInputTypeVariableDefaultValue" value="false"/>
+  </gvp:CallflowDiagram>
+  <notation:Diagram type="Studio" element="/0" name="Main.callflow" measurementUnit="Pixel">
+    <children xsi:type="notation:Shape" type="1003" element="/0/@blocks.0">
+      <children xsi:type="notation:DecorationNode" type="6003"/>
+      <children xsi:type="notation:DecorationNode" type="6001"/>
+      <layoutConstraint xsi:type="notation:Bounds" x="476" y="34"/>
+    </children>
+    <children xsi:type="notation:Shape" type="1004" element="/0/@blocks.1">
+      <children xsi:type="notation:DecorationNode" type="6002"/>
+      <children xsi:type="notation:DecorationNode" type="4005"/>
+      <layoutConstraint xsi:type="notation:Bounds" x="442" y="306"/>
+    </children>
+    <styles xsi:type="notation:DiagramStyle"/>
+    <edges xsi:type="notation:Connector" type="3001" element="/0/@links.0" source="/1/@children.0" target="/1/@children.1" roundedBendpointsRadius="10" routing="Rectilinear" closestDistance="true" lineColor="16711680">
+      <children xsi:type="notation:DecorationNode" type="4074">
+        <layoutConstraint xsi:type="notation:Location" x="5" y="5"/>
+      </children>
+      <styles xsi:type="notation:FontStyle"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" points="[2, 1, 0, -101]$[1, 101, -1, -1]"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.4727272727272727,0.98)"/>
+      <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.4909090909090909,0.02)"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>
